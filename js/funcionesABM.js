@@ -21,6 +21,7 @@ function Borrarvoto(idParametro)
 
 function Editarvoto(idParametro)
 {
+    Mostrar('MostrarFormAlta');
 	//alert("Modificar");
 	var funcionAjax=$.ajax({
 		url:"nexo.php",
@@ -41,11 +42,12 @@ function Editarvoto(idParametro)
              $('input:radio[name="sexo"][value="F"]').prop('checked', true);
         else
             $('input:radio[name="sexo"][value="M"]').prop('checked', true);	
+        
 	});
 	funcionAjax.fail(function(retorno){
 		$("#principal").html(retorno.responseText);	
 	});
-	Mostrar('MostrarFormAlta');
+	
 }
 
 function VerEnMapa(prov, dire, loc, id)
