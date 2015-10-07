@@ -15,7 +15,7 @@ Geolocalizacion.Marcador = Geolocalizacion.Marcador || {};
      
     self.iniciar = function iniciar() {
         //el array lo borro si solo quiero mostrar un marcador
-        puntos = [];
+        //puntos = [];
         //Geolocalizacion del navegador
 //         if(navigator.geolocation) {
 //            navigator.geolocation.getCurrentPosition(function (position) {
@@ -71,8 +71,6 @@ Geolocalizacion.Marcador = Geolocalizacion.Marcador || {};
         //countMarker = 0;
         if (puntos.length > 0)
             Geolocalizacion.displayMarkers(map, puntos, infoWindow);
-        self.verMarcador();
-       
       };
     
      //google.maps.event.addDomListener(window, 'load', iniciar);
